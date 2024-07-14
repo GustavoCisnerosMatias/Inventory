@@ -1,0 +1,45 @@
+ion-header {
+  --background: #3880ff; /* Cambia el color de fondo del header */
+  --color: #fff; /* Cambia el color del texto en el header */
+}
+
+ion-toolbar {
+  --padding-start: 10px;
+  --padding-end: 10px;
+}
+
+ion-title {
+  font-size: 1.5rem; /* Aumenta el tamaño de la fuente del título */
+  font-weight: bold; /* Hace que el título sea negrita */
+}
+
+ion-item {
+  --inner-padding-top: 10px;
+  --inner-padding-bottom: 10px;
+}
+
+ion-input {
+  --padding-start: 10px; /* Añade padding al inicio del input */
+  --padding-end: 10px; /* Añade padding al final del input */
+  font-size: 1rem; /* Ajusta el tamaño de la fuente */
+}
+
+ion-label {
+  font-size: 0.9rem; /* Ajusta el tamaño de la fuente de los labels */
+  color: #666; /* Cambia el color de los labels */
+}
+
+form {
+  padding: 15px;
+}
+
+ion-button {
+  margin-top: 20px; /* Añade margen superior a los botones */
+  --border-radius: 8px; /* Hace que los botones tengan bordes redondeados */
+  font-size: 1rem; /* Ajusta el tamaño de la fuente del botón */
+}
+
+ion-button[color="danger"] {
+  --background: #eb445a; /* Cambia el color de fondo del botón "Cancelar" */
+  --color: #fff; /* Cambia el color del texto del botón "Cancelar" */
+}

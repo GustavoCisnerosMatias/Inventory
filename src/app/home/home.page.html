@@ -1,0 +1,121 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary"> Gestion de Inventario </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="margin: 1%">
+  <div *ngIf="admin === '0'" class="login-container">
+    <h2 class="login-title">Inicia sesión</h2>
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="user" name="usuario"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input
+          type="password"
+          [(ngModel)]="pass"
+          name="password"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="cargarUsuarios()" color="primary">
+        Iniciar sesión
+      </ion-button>
+    </ion-list>
+  </div>
+
+  <div *ngIf="admin === '1'">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card class="colorboton1" (click)="servG.irA('/productos')">
+            <ion-card-content>
+              <ion-icon name="calculator"> </ion-icon>
+            </ion-card-content>
+            <ion-card-title>Productos</ion-card-title>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="colorboton2" (click)="servG.irA('/proveedores')">
+            <ion-card-content>
+              <ion-icon name="person"> </ion-icon>
+            </ion-card-content>
+            <ion-card-title>Proveedores</ion-card-title>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="colorboton2" (click)="servG.irA('/inventarios')">
+            <ion-card-content>
+              <ion-icon name="clipboard-outline"> </ion-icon>
+            </ion-card-content>
+            <ion-card-title>Inventarios</ion-card-title>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="colorboton2" (click)="servG.irA('/inventariocant')">
+            <ion-card-content>
+              <ion-icon name="alert-circle-outline"> </ion-icon>
+            </ion-card-content>
+            <ion-card-title>Stock</ion-card-title>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="colorboton1" (click)="servG.irA('/usuarios')">
+            <ion-card-content>
+              <ion-icon name="person"> </ion-icon>
+            </ion-card-content>
+            <ion-card-title>Usuarios</ion-card-title>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="admin === '2'">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card class="colorboton1" (click)="servG.irA('/productos')">
+            <ion-card-content>
+              <ion-icon name="calculator"> </ion-icon>
+            </ion-card-content>
+            <ion-card-title>Productos</ion-card-title>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="colorboton2" (click)="servG.irA('/proveedores')">
+            <ion-card-content>
+              <ion-icon name="person"> </ion-icon>
+            </ion-card-content>
+            <ion-card-title>Proveedores</ion-card-title>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="colorboton2" (click)="servG.irA('/inventarios')">
+            <ion-card-content>
+              <ion-icon name="person"> </ion-icon>
+            </ion-card-content>
+            <ion-card-title>Inventarios</ion-card-title>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="colorboton2" (click)="servG.irA('/inventariocant')">
+            <ion-card-content>
+              <ion-icon name="person"> </ion-icon>
+            </ion-card-content>
+            <ion-card-title>Stock</ion-card-title>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+<div class="cerrar-sesion" *ngIf="admin !== '0'">
+  <ion-button expand="full" color="danger" (click)="cerrarSesion()">
+    Cerrar sesión
+  </ion-button>
+</div>

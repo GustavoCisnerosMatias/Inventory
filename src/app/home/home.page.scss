@@ -1,0 +1,86 @@
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Make sure it takes the full viewport height */
+  margin: 0; /* Reset margin to prevent overflow */
+}
+.cerrar-sesion {
+  margin-top: auto;
+  padding: 10px;
+}
+.page-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 1%;
+}
+ion-icon {
+  color: #0054e9;
+}
+ion-card {
+  margin: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+}
+ion-item {
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+ion-label {
+  font-weight: bold;
+}
+
+ion-button {
+  margin-top: 16px;
+  border-radius: 8px;
+}
+
+.cerrar-sesion {
+  position: fixed;
+  bottom: 16px;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.cerrar-sesion ion-button {
+  width: 100%;
+  border-radius: 8px;
+}
+
+ion-card-content ion-icon {
+  font-size: 2em;
+  // display: block;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Para centrar verticalmente */
+  text-align: center;
+}
+
+.login-title {
+  margin-bottom: 20px; /* Espacio entre el título y el formulario */
+}
+ion-card {
+  border-radius: 8px; /* Ajusta el radio de borde según sea necesario */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra para resaltar el card */
+  transition: transform 0.2s; /* Opcional: transición al hacer hover */
+}
+
+ion-card-content {
+  text-align: center; /* Centra el contenido del card */
+}
+
+ion-card-title {
+  text-align: center; /* Centra el título del card */
+}

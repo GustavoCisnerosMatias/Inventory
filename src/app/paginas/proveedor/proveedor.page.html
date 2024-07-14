@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary"
+      >{{ id == 0 ? 'Nuevo' : 'Editar' }} Proveedor</ion-title
+    >
+    <ion-buttons slot="end">
+      <ion-button (click)="guardarCambios()">
+        <ion-icon name="save"></ion-icon> Grabar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="guardarCambios()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="objProveedor.Nombre"
+        name="Nombre"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contacto</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="objProveedor.Contacto"
+        name="Contacto"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input
+        type="tel"
+        [(ngModel)]="objProveedor.Telefono"
+        name="Telefono"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input
+        type="email"
+        [(ngModel)]="objProveedor.Email"
+        name="Email"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="backToProveedores()" color="danger">
+      <ion-icon></ion-icon> Cancelar
+    </ion-button>
+  </form>
+</ion-content>

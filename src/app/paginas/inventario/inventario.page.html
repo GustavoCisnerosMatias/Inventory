@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary"
+      >{{ id == 0 ? 'Nuevo' : 'Editar' }} Inventario</ion-title
+    >
+    <ion-buttons slot="end">
+      <ion-button (click)="guardarCambios()">
+        <ion-icon name="save"></ion-icon> Grabar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="guardarCambios()">
+    <ion-item>
+      <ion-label>Producto</ion-label>
+      <ion-select [(ngModel)]="objInventario.ProductoID" name="ProductoID">
+        <ion-select-option
+          *ngFor="let producto of listaProductos"
+          [value]="producto.ProductoID"
+        >
+          {{ producto.Nombre }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Cantidad</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="objInventario.Cantidad"
+        name="Cantidad"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ubicación</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="objInventario.ubicacion"
+        name="Ubicacion"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="backToInventarios()" color="danger">
+      <ion-icon name="arrow-back"></ion-icon> Cancelar
+    </ion-button>
+  </form>
+</ion-content>
